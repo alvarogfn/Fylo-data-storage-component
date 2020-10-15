@@ -1,0 +1,148 @@
+.attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+
+    padding: .5rem 1rem;
+    
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+
+    .my {
+        justify-self: right;
+
+        @include center;
+        position: relative;
+    
+        &__link {
+            @include center;
+        }
+    
+        &__img {
+            width: 30px;
+            opacity: .8;
+            transition: 200ms;
+        }
+    
+        &__coded {
+            width: max-content;
+        }
+    }
+
+    .challenge {
+        justify-self: left;
+
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__by {
+            margin-left: .5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .attribution {
+        position: fixed;
+        .my {
+
+            &:hover {
+                .my__img {
+                    transform: scale(1.25);
+                    filter: grayscale(0);
+                    opacity: 1;
+                    transition: 400ms;
+                }
+        
+                .my__coded {
+                    right: 120%;
+                    opacity: 1;
+                    transition: opacity 400ms;
+                }
+            }
+        
+            &__img {
+                filter: grayscale(100%);
+            }
+        
+            &__coded {
+                position: absolute;
+                right: -500%;
+        
+                transition: opacity 100ms, right 400ms;
+                opacity: 0;
+            }
+        }
+    
+        .challenge {
+            flex-flow: column;
+            justify-content: flex-end;
+    
+            position: relative;
+    
+            &:hover {
+                .challenge__img {
+                    filter: opacity(100%);
+                }
+    
+                .challenge__by {
+                    left: 125%;
+                    opacity: 1;
+                    transition: 400ms opacity;
+                }
+                
+            }
+    
+            &__img {
+                filter: opacity(50%);
+                transition: 400ms;
+            }
+    
+            &__by {
+                position: absolute;
+                left: -700%;
+                bottom: 50%;
+                z-index: -1;
+    
+                width: max-content;
+            
+                opacity: 0;
+                transform: translate(0, 50%);
+                transition: 400ms, 100ms opacity;
+                
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .attribution {
+        grid-template-columns: 1fr;
+    }
+
+    .my {
+        grid-row: 1 / 2;
+        &__coded {
+            text-indent: -999999px;
+        }
+    }
+
+    .challenge {
+        grid-row: 1 / 2;
+        &__by {
+            text-indent: -9999999px;
+        }
+    }
+} 
+
+    
