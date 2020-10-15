@@ -42,3 +42,28 @@
     align-items: center;
     text-align: center;
 }
+
+@keyframes usedStorageBar {
+    0% {
+      width: 0%;  
+    }
+
+    75% {
+        width: 70%;
+    }
+
+    100% {
+        width: 81.5%;
+    }
+}
+
+@keyframes animationBallon {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-// font import
+// font import //
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
     // font-family: 'Raleway', sans-serif;
 
@@ -9,15 +9,17 @@ body {
     background: $very-dark-blue url('../images/bg-desktop.png') no-repeat;
     background-position: bottom right;
     background-size: 100% 50%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     color: $pale-blue;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 

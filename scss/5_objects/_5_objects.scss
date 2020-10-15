@@ -1,18 +1,19 @@
 .container {
     display: grid;
-    align-items: flex-end;
-    justify-content: center;
     grid-template-columns: 350px minmax(450px, 40vw);
     column-gap: 20px;
-    min-width: 920px;
 
+    justify-content: center;
+    align-items: flex-end;
+
+    min-width: 920px;
 }
 
 @include mediaquery(1440px) {
     .container {
         grid-template-columns: minmax(225px, 25vw) minmax(450px, 40vw);
-        min-width: 425px;
         margin-left: 0;
+        min-width: 425px;
     }
 }
 
@@ -29,8 +30,8 @@
     .container {
         grid-template-columns: 85vw;
         grid-template-rows: 200px 175px;
-        align-items: flex-start;
         row-gap: 15px;
+        align-items: flex-start;
         min-width: auto;
     }
 }
