@@ -9,6 +9,7 @@ body {
     background: $very-dark-blue url('../images/bg-desktop.png') no-repeat;
     background-position: bottom right;
     background-size: 100% 50%;
+    min-height: 650px;
 
     display: flex;
     justify-content: center;
@@ -34,11 +35,5 @@ ul, li, a {
         background: url('../images/bg-mobile.png') no-repeat;
         background-position: center center;
         background-size: 100% 100%;
-    }
-}
-
-@include mediaquery(768px) {
-    body {
-        align-items: center;
     }
 }

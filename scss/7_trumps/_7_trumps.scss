@@ -21,6 +21,7 @@
     letter-spacing: .1rem;
     text-transform: uppercase;
     
+    opacity: .5;
 
     margin: 1rem;
 
@@ -61,6 +62,8 @@
 }
 
 @media screen and (min-width: 900px) {
+    .attribution {opacity: 1;}
+
     .challenge, .my {
         &:hover {
             .challenge__by, .my__coded {

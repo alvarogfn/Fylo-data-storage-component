@@ -409,6 +409,7 @@ body {
   background: #0c122c url("../images/bg-desktop.png") no-repeat;
   background-position: bottom right;
   background-size: 100% 50%;
+  min-height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,14 +439,6 @@ ul, li, a {
     background: url("../images/bg-mobile.png") no-repeat;
     background-position: center center;
     background-size: 100% 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -748,8 +741,8 @@ ul, li, a {
   .storage__left {
     top: 100%;
     left: 50%;
-    -webkit-animation: n;
-            animation: n;
+    -webkit-animation: none;
+            animation: none;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     width: -webkit-max-content;
@@ -789,6 +782,7 @@ ul, li, a {
   font-weight: bold;
   letter-spacing: .1rem;
   text-transform: uppercase;
+  opacity: .5;
   margin: 1rem;
 }
 
@@ -852,6 +846,9 @@ ul, li, a {
 }
 
 @media screen and (min-width: 900px) {
+  .attribution {
+    opacity: 1;
+  }
   .challenge:hover .challenge__by, .challenge:hover .my__coded, .my:hover .challenge__by, .my:hover .my__coded {
     opacity: 1;
   }
